@@ -1,0 +1,195 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   Base
+   ============================================================ */
+
+:root {
+  --pink: #F9D6E5;
+  --teal: #4ECDC4;
+  --ink-900: #18181B;
+  --ink-500: #71717A;
+  color-scheme: light;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem; /* allow anchor nav with sticky header */
+}
+
+body {
+  @apply bg-white text-ink-900 font-sans;
+  font-feature-settings: 'ss01', 'cv11';
+}
+
+::selection {
+  background-color: rgba(249, 214, 229, 0.7); /* soft pink */
+  color: #18181B;
+}
+
+/* Slim, restrained scrollbar */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: #E4E4E7;
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+::-webkit-scrollbar-thumb:hover { background: #D4D4D8; background-clip: padding-box; }
+
+/* Focus rings — accessible, restrained */
+:focus-visible {
+  outline: 2px solid #4ECDC4;
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* ============================================================
+   Layout primitives
+   ============================================================ */
+
+@layer components {
+  .container-content {
+    @apply mx-auto w-full max-w-content px-6 sm:px-8 lg:px-12;
+  }
+
+  .section {
+    @apply py-20 sm:py-28 lg:py-32;
+  }
+
+  .eyebrow {
+    @apply inline-block text-xs sm:text-sm font-medium uppercase tracking-[0.18em] text-teal-600;
+  }
+
+  /* Apple-style chip/button */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full
+           text-[15px] font-medium transition-all duration-300 ease-apple
+           focus:outline-none;
+  }
+  .btn-primary {
+    @apply btn bg-ink-900 text-white hover:bg-ink-800 hover:-translate-y-px hover:shadow-elevated;
+  }
+  .btn-secondary {
+    @apply btn bg-white text-ink-900 border border-ink-200 hover:border-ink-300 hover:-translate-y-px hover:shadow-soft;
+  }
+  .btn-accent {
+    @apply btn bg-teal-400 text-ink-900 hover:bg-teal-500 hover:-translate-y-px hover:shadow-elevated;
+  }
+  .btn-ghost {
+    @apply btn text-ink-700 hover:text-ink-900 hover:bg-ink-100;
+  }
+
+  /* Card surfaces */
+  .card {
+    @apply relative bg-white border border-ink-200/70 rounded-3xl
+           transition-all duration-500 ease-apple;
+  }
+  .card-hover {
+    @apply hover:shadow-elevated hover:-translate-y-1 hover:border-ink-200;
+  }
+
+  /* Tag chips */
+  .chip {
+    @apply inline-flex items-center px-3 py-1 rounded-full
+           text-xs font-medium bg-ink-100 text-ink-700;
+  }
+  .chip-pink {
+    @apply chip bg-pink-100 text-pink-700;
+  }
+  .chip-teal {
+    @apply chip bg-teal-100 text-teal-700;
+  }
+
+  /* Subtle divider */
+  .divider {
+    @apply border-t border-ink-200/70;
+  }
+
+  /* Hero gradient blob */
+  .hero-blob {
+    background: radial-gradient(60% 60% at 30% 30%, #F9D6E5 0%, transparent 60%),
+                radial-gradient(50% 50% at 70% 70%, #4ECDC4 0%, transparent 65%);
+    filter: blur(60px);
+    opacity: 0.55;
+  }
+}
+
+/* ============================================================
+   Prose (article body)
+   ============================================================ */
+
+@layer components {
+  .prose-irena {
+    @apply text-ink-700 text-[17px] leading-[1.75] max-w-prose;
+  }
+  .prose-irena h1 {
+    @apply text-display-lg text-ink-900 mt-12 mb-6;
+  }
+  .prose-irena h2 {
+    @apply text-2xl sm:text-3xl font-semibold tracking-tight text-ink-900 mt-12 mb-4;
+  }
+  .prose-irena h3 {
+    @apply text-xl sm:text-2xl font-semibold tracking-tight text-ink-900 mt-8 mb-3;
+  }
+  .prose-irena p { @apply my-5; }
+  .prose-irena a {
+    @apply text-teal-600 underline underline-offset-4 decoration-teal-300 hover:decoration-teal-500 transition-colors;
+  }
+  .prose-irena strong { @apply text-ink-900 font-semibold; }
+  .prose-irena em { @apply italic; }
+  .prose-irena ul { @apply list-disc pl-6 my-5 space-y-2; }
+  .prose-irena ol { @apply list-decimal pl-6 my-5 space-y-2; }
+  .prose-irena li::marker { @apply text-ink-400; }
+  .prose-irena blockquote {
+    @apply border-l-2 border-teal-400 pl-5 my-6 italic text-ink-600;
+  }
+  .prose-irena code {
+    @apply font-mono text-[0.92em] bg-ink-100 text-ink-800 px-1.5 py-0.5 rounded;
+  }
+  .prose-irena pre {
+    @apply font-mono text-sm bg-ink-900 text-ink-100 p-5 rounded-2xl my-6 overflow-x-auto;
+  }
+  .prose-irena pre code {
+    @apply bg-transparent text-ink-100 p-0;
+  }
+  .prose-irena hr { @apply my-10 border-ink-200; }
+  .prose-irena img {
+    @apply rounded-2xl my-6 border border-ink-200;
+  }
+  .prose-irena table { @apply w-full text-sm my-6 border-collapse; }
+  .prose-irena th { @apply text-left font-semibold border-b border-ink-200 py-2 pr-4; }
+  .prose-irena td { @apply border-b border-ink-100 py-2 pr-4 align-top; }
+}
+
+/* ============================================================
+   Reveal-on-scroll utility (used by <FadeIn />)
+   ============================================================ */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+}
