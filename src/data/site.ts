@@ -7,13 +7,13 @@ export const siteConfig = {
   description:
     'Irena is an AI product builder and researcher focused on practical applications that improve wellness, productivity, decision-making, and user experiences.',
   // Replace with your deployed URL (no trailing slash).
-  url: 'https://your-username.github.io/irena-portfolio',
+  url: 'https://zyrirena.github.io/iz-portfolio',
   // OG image relative to /public.
   ogImage: '/images/og-default.png',
   locale: 'en_US',
 
   social: {
-    github: 'https://github.com/your-username',
+    github: 'https://github.com/zyrirena',
     // Add others when you'd like, e.g. linkedin, twitter, email.
     linkedin: '',
     twitter: '',
@@ -85,14 +85,14 @@ export const siteConfig = {
         'AI-powered behavioral coaching platform for healthier habits, meal planning, and motivation.',
       language: 'TypeScript',
       stars: 0,
-      url: 'https://github.com/your-username/wellness-coach-ai',
+      url: 'https://github.com/zyrirena/wellness-coach-ai',
     },
     {
       name: 'irena-portfolio',
       description: 'This website — a statically-exported Next.js portfolio deployed to GitHub Pages.',
       language: 'TypeScript',
       stars: 0,
-      url: 'https://github.com/your-username/irena-portfolio',
+      url: 'https://github.com/zyrirena/iz-portfolio',
     },
   ],
 
