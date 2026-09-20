@@ -1,7 +1,7 @@
 ---
 title: "Wellness Coach AI"
 slug: "wellness-coach-ai"
-summary: "An AI-powered behavioral coaching platform that helps users develop healthier habits through personalized wellness guidance, meal planning, exercise recommendations, and motivational support."
+summary: "A hobby project exploring how AI can support behavioral coaching. I am building this to test ethical guardrails in personalized wellness guidance."
 status: "In Development"
 featured: true
 order: 1
