@@ -25,13 +25,14 @@ export const siteConfig = {
     headline: 'Exploring & Building Ethical AI for Fun',
     subheadline:
       "This is my personal playground. I'm currently studying Responsible AI and using this space to share my hobby projects, academic experiments, and learning journey.",
+    tagline: 'Federal HR background · AI hobbyist · coach in training · small-shop owner',
     primaryCta: { label: 'View Projects', href: '/projects' },
     secondaryCta: { label: 'Read Blog', href: '/blog' },
   },
 
   about: {
     intro:
-      "I'm Irena — a product-minded engineer who builds AI systems that solve real, measurable problems for real people. I care about responsible AI, thoughtful product design, and shipping software that earns the trust of its users.",
+      'I’m Irena. I have a background in federal HR, where people, policy, and fairness are the daily work — and it shapes how I think about building AI responsibly. These days I’m studying Responsible AI, building hobby projects with AI agents, training toward my ICF coaching credential, and running CraftyGalShop, my online shop for personalized off-roading gifts.',
     aiInterests: [
       'Large language model applications',
       'Behavioral and wellness AI',
@@ -80,12 +81,12 @@ export const siteConfig = {
   // (These are presentational — no API call needed for the static build.)
   featuredRepos: [
     {
-      name: 'wellness-coach-ai',
+      name: 'LeanMindAI',
       description:
-        'AI-powered behavioral coaching platform for healthier habits, meal planning, and motivation.',
+        'A wellness AI built with regulatory compliance from day one — a hobby project testing ethical guardrails.',
       language: 'TypeScript',
       stars: 0,
-      url: 'https://github.com/zyrirena/wellness-coach-ai',
+      url: 'https://github.com/zyrirena/LeanMindAI',
     },
     {
       name: 'irena-portfolio',
@@ -95,6 +96,54 @@ export const siteConfig = {
       url: 'https://github.com/zyrirena/iz-portfolio',
     },
   ],
+
+  // "What I'm into" cards on the home page.
+  interests: {
+    eyebrow: 'About me',
+    heading: 'What I’m into.',
+    items: [
+      {
+        label: 'Build',
+        title: 'AI projects for fun',
+        body: 'I love tinkering with AI and turning curiosity into working apps.',
+        href: '/projects',
+        cta: 'See projects',
+        external: false,
+      },
+      {
+        label: 'Build responsibly',
+        title: 'AI agents with guardrails',
+        body: 'I build agent-powered apps with clear AI disclosure, honesty checks, and compliance in mind from day one.',
+        href: '/projects/wellness-coach-ai',
+        cta: 'See LeanMind AI',
+        external: false,
+      },
+      {
+        label: 'Grow',
+        title: 'My coaching practice',
+        body: 'I’m training toward my ICF credential and offering peer and pro-bono coaching sessions.',
+        href: '/coaching',
+        cta: 'Book a session',
+        external: false,
+      },
+      {
+        label: 'Background',
+        title: 'Federal HR experience',
+        body: 'I bring a background in federal HR — working with people, policy, and process — to how I think about fair, responsible technology.',
+        href: '/about',
+        cta: 'About me',
+        external: false,
+      },
+      {
+        label: 'Shop',
+        title: 'CraftyGalShop',
+        body: 'My online shop for personalized gifts for off-roading enthusiasts — custom engraving, blankets, drinkware, and trail-ready humor.',
+        href: 'https://craftygalshop.com',
+        cta: 'Visit the shop',
+        external: true,
+      },
+    ],
+  },
 
   // Coaching page. Paste your scheduling link (Calendly, Cal.com, Google
   // Calendar appointment page, ...) into bookingUrl to show the calendar.
