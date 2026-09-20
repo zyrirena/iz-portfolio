@@ -4,6 +4,8 @@ export interface ProjectFrontmatter {
   title: string;
   slug: string;
   summary: string;
+  /** Optional longer paragraph shown under the summary on the project page */
+  detail?: string;
   description?: string;
   status: ProjectStatus;
   tech: string[];
