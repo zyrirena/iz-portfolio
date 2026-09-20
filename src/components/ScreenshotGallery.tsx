@@ -25,19 +25,27 @@ export default function ScreenshotGallery({
   }
 
   return (
-    <div className="my-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div className="my-10 flex flex-col gap-8">
       {images.map((src, idx) => (
         <figure
           key={src}
-          className="group relative aspect-[4/3] rounded-2xl overflow-hidden border border-ink-200 bg-ink-50"
+          className="group rounded-2xl overflow-hidden border border-ink-200 bg-ink-50 shadow-sm"
         >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={asset(src)}
-            alt={`${alt} ${idx + 1}`}
-            className="w-full h-full object-cover transition-transform duration-500 ease-apple group-hover:scale-105"
-            loading="lazy"
-          />
+          <a
+            href={asset(src)}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Open ${alt} ${idx + 1} full size`}
+            className="block"
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={asset(src)}
+              alt={`${alt} ${idx + 1}`}
+              className="block w-full h-auto"
+              loading="lazy"
+            />
+          </a>
         </figure>
       ))}
     </div>
