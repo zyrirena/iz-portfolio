@@ -69,7 +69,7 @@ export default function ProjectCard({ project, variant = 'default' }: ProjectCar
 
       {/* Content */}
       <div className={`p-6 sm:p-8 ${isFeatured ? 'lg:p-12 flex flex-col justify-center' : ''}`}>
-        {isFeatured && <span className="eyebrow mb-3">Featured Project</span>}
+        {isFeatured && <span className="eyebrow mb-3">Current Experiment</span>}
 
         <h3
           className={`font-display font-semibold tracking-tight text-ink-900 group-hover:text-teal-600 transition-colors ${
