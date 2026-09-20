@@ -15,8 +15,9 @@ tech:
   - "PostgreSQL"
   - "Redis"
   - "Tailwind CSS"
-github: "https://github.com/your-username/wellness-coach-ai"
+github: "https://github.com/zyrirena/LeanMindAI"
 demo: "https://lean-mind-ai.vercel.app/en"
+detail: "LeanMind is a wellness AI I built with regulatory compliance shipped from day one — not bolted on later. It addresses six specific laws: New York's AI Companion Models Law, California SB 243, Illinois and Tennessee's professional-impersonation laws, COPPA, and FTC endorsement rules. Every mitigation is documented and testable — persistent AI disclosure, published crisis protocol, agent honesty guards, 18+ age gate, no fabricated social proof."
 cover: "/images/projects/wellness-coach-ai/cover.jpg"
 coverVideo: "/videos/wellness-coach-ai/cover.mp4"
 screenshots:
