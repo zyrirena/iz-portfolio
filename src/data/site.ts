@@ -6,8 +6,8 @@ export const siteConfig = {
   title: 'Irena — Exploring & Building Ethical AI for Fun',
   description:
     "Irena's personal playground — a student studying Responsible AI, sharing hobby projects, academic experiments, and her learning journey.",
-  // Replace with your deployed URL (no trailing slash).
-  url: 'https://zyrirena.github.io/iz-portfolio',
+  // Your deployed URL (no trailing slash).
+  url: 'https://pizdryk.com',
   // OG image relative to /public.
   ogImage: '/images/og-default.png',
   locale: 'en_US',
