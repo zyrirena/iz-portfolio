@@ -31,6 +31,11 @@ export default function Hero() {
             <p className="mt-8 text-lg sm:text-xl leading-relaxed text-ink-600 max-w-2xl">
               {hero.subheadline}
             </p>
+            {hero.tagline && (
+              <p className="mt-4 text-base font-medium text-ink-700 max-w-2xl">
+                {hero.tagline}
+              </p>
+            )}
           </FadeIn>
 
           <FadeIn delay={300}>
