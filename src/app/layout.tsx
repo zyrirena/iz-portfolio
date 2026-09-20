@@ -14,11 +14,10 @@ export const metadata: Metadata = {
   keywords: [
     'AI',
     'Artificial Intelligence',
-    'Machine Learning',
-    'LLM',
-    'Product Builder',
     'Responsible AI',
-    'AI Engineer',
+    'Ethical AI',
+    'AI agents',
+    'ICF coaching',
     'Portfolio',
     siteConfig.name,
   ],
@@ -27,7 +26,6 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: siteConfig.locale,
-    url: siteConfig.url,
     title: siteConfig.title,
     description: siteConfig.description,
     siteName: siteConfig.name,
@@ -56,9 +54,6 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-  alternates: {
-    canonical: '/',
   },
 };
 
