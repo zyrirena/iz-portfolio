@@ -68,6 +68,11 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           <p className="mt-6 text-lg sm:text-xl text-ink-600 max-w-3xl leading-relaxed">
             {project.summary}
           </p>
+          {project.detail && (
+            <p className="mt-4 text-base sm:text-lg text-ink-600 max-w-3xl leading-relaxed">
+              {project.detail}
+            </p>
+          )}
 
           <div className="mt-8 flex flex-wrap gap-2">
             {project.tech.map((t) => (
