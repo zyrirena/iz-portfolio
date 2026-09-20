@@ -91,9 +91,9 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 href={project.demo}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary"
+                className="btn-secondary"
               >
-                Live demo <span aria-hidden="true">→</span>
+                Try App <span aria-hidden="true">↗</span>
               </a>
             )}
           </div>
