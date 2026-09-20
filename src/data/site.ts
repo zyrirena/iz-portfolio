@@ -105,7 +105,22 @@ export const siteConfig = {
       'One-to-one coaching for people who want a thinking partner — to get clear on a goal, build a habit that sticks, or work through a decision.',
     credentialNote:
       'I’m training toward an ICF credential and coach in line with the ICF Core Competencies and Code of Ethics.',
-    bookingUrl: '',
+    bookingUrl: 'https://calendar.app.google/x9UEYMw2jiH5bCb17',
+    // true = show the calendar inline (iframe); false = show a booking button.
+    embed: false,
+    intakeFormUrl: 'https://forms.gle/pJ6jU2JrLXXznDS17',
+    sessionTypes: [
+      {
+        title: 'Peer coaching exchange',
+        body: 'For fellow coaches who want to swap practice hours. We take turns coaching, with time for feedback, in reciprocal sessions of 30 to 60 minutes.',
+      },
+      {
+        title: 'Pro-bono coaching',
+        body: 'Free coaching for anyone who wants dedicated support with a personal or professional goal. Choose a 30- or 60-minute session, and please fill in the short intake form first.',
+      },
+    ],
+    bookingNote:
+      'Sessions are held on Google Meet, and the link is sent after you book. I’m based in Eastern Time and can be flexible for international schedules. Please bring a specific topic you’d like to work on.',
   },
 
   contact: {
