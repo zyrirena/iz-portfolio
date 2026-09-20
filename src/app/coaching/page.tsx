@@ -84,7 +84,7 @@ export default function CoachingPage() {
             Pick a time that works for you. Times are shown in your local time zone.
           </p>
 
-          {bookingUrl ? (
+          {bookingUrl && coaching.embed ? (
             <div className="mt-8">
               <div className="card overflow-hidden">
                 <iframe
@@ -104,6 +104,42 @@ export default function CoachingPage() {
                 >
                   Open the booking page in a new tab ↗
                 </a>
+              </p>
+            </div>
+          ) : bookingUrl ? (
+            <div className="mt-8 card p-8 sm:p-12 bg-gradient-to-br from-pink-100 via-white to-teal-100 border-ink-200">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {coaching.sessionTypes.map((t) => (
+                  <div key={t.title}>
+                    <h3 className="text-xl font-display font-semibold tracking-tight text-ink-900">
+                      {t.title}
+                    </h3>
+                    <p className="mt-2 text-ink-600 leading-relaxed">{t.body}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <a
+                  href={bookingUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary"
+                >
+                  Book a session <span aria-hidden="true">↗</span>
+                </a>
+                {coaching.intakeFormUrl && (
+                  <a
+                    href={coaching.intakeFormUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-secondary"
+                  >
+                    Pro-bono intake form <span aria-hidden="true">↗</span>
+                  </a>
+                )}
+              </div>
+              <p className="mt-5 text-sm text-ink-500">
+                {coaching.bookingNote}
               </p>
             </div>
           ) : (
