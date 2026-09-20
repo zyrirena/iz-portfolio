@@ -10,6 +10,8 @@ export interface ProjectFrontmatter {
   github?: string;
   demo?: string;
   cover?: string;
+  /** Optional looping .mp4 shown on the cover instead of the still image */
+  coverVideo?: string;
   screenshots?: string[];
   video?: string;
   featured?: boolean;

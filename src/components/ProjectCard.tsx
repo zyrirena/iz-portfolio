@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { asset } from '@/lib/utils';
 import type { Project } from '@/lib/types';
 import Tag, { StatusBadge } from './Tag';
+import CoverVideo from './CoverVideo';
 
 interface ProjectCardProps {
   project: Project;
@@ -24,7 +25,13 @@ export default function ProjectCard({ project, variant = 'default' }: ProjectCar
           isFeatured ? 'aspect-[4/3] lg:aspect-auto lg:min-h-[420px]' : 'aspect-[16/10]'
         } bg-gradient-to-br from-pink-100 via-white to-teal-100`}
       >
-        {project.cover ? (
+        {project.coverVideo ? (
+          <CoverVideo
+            src={project.coverVideo}
+            poster={project.cover}
+            label={`${project.title} cover animation`}
+          />
+        ) : project.cover ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
             src={asset(project.cover)}

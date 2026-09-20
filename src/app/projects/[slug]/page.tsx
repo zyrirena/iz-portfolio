@@ -7,6 +7,7 @@ import Tag, { StatusBadge } from '@/components/Tag';
 import VideoShowcase from '@/components/VideoShowcase';
 import ScreenshotGallery from '@/components/ScreenshotGallery';
 import FadeIn from '@/components/FadeIn';
+import CoverVideo from '@/components/CoverVideo';
 import { siteConfig } from '@/data/site';
 
 interface ProjectPageProps {
@@ -104,12 +105,20 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         <section className="container-content pb-12">
           <FadeIn>
             <div className="relative aspect-[16/9] rounded-4xl overflow-hidden border border-ink-200 shadow-card">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={asset(project.cover)}
-                alt={`${project.title} cover`}
-                className="w-full h-full object-cover"
-              />
+              {project.coverVideo ? (
+                <CoverVideo
+                  src={project.coverVideo}
+                  poster={project.cover}
+                  label={`${project.title} cover animation`}
+                />
+              ) : (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={asset(project.cover)}
+                  alt={`${project.title} cover`}
+                  className="w-full h-full object-cover"
+                />
+              )}
             </div>
           </FadeIn>
         </section>

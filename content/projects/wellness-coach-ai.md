@@ -18,6 +18,7 @@ tech:
 github: "https://github.com/your-username/wellness-coach-ai"
 demo: ""
 cover: "/images/projects/wellness-coach-ai/cover.jpg"
+coverVideo: "/videos/wellness-coach-ai/cover.mp4"
 screenshots:
   - "/images/projects/wellness-coach-ai/screenshot-1.jpg"
   - "/images/projects/wellness-coach-ai/screenshot-2.jpg"
