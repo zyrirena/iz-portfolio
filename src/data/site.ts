@@ -3,9 +3,9 @@
 
 export const siteConfig = {
   name: 'Irena',
-  title: 'Irena — Building Practical AI Solutions',
+  title: 'Irena — Exploring & Building Ethical AI for Fun',
   description:
-    'Irena is an AI product builder and researcher focused on practical applications that improve wellness, productivity, decision-making, and user experiences.',
+    "Irena's personal playground — a student studying Responsible AI, sharing hobby projects, academic experiments, and her learning journey.",
   // Replace with your deployed URL (no trailing slash).
   url: 'https://zyrirena.github.io/iz-portfolio',
   // OG image relative to /public.
