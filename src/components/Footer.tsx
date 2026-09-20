@@ -25,6 +25,7 @@ export default function Footer() {
               <li><Link href="/about" className="text-ink-700 hover:text-ink-900 transition-colors">About</Link></li>
               <li><Link href="/projects" className="text-ink-700 hover:text-ink-900 transition-colors">Projects</Link></li>
               <li><Link href="/blog" className="text-ink-700 hover:text-ink-900 transition-colors">Blog</Link></li>
+              <li><Link href="/coaching" className="text-ink-700 hover:text-ink-900 transition-colors">Coaching</Link></li>
               <li><Link href="/contact" className="text-ink-700 hover:text-ink-900 transition-colors">Contact</Link></li>
             </ul>
           </div>
