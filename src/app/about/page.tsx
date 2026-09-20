@@ -5,7 +5,7 @@ import { siteConfig } from '@/data/site';
 
 export const metadata: Metadata = {
   title: 'About',
-  description: `About ${siteConfig.name} — AI product builder and researcher focused on practical applications.`,
+  description: `About ${siteConfig.name} — federal HR background, responsible-AI student, coach in training, and small-shop owner.`,
 };
 
 const skillCategoryColors: Record<string, string> = {
@@ -62,7 +62,7 @@ export default function AboutPage() {
           <FadeIn>
             <span className="eyebrow">About</span>
             <h1 className="mt-4 text-display-xl font-display text-ink-900 max-w-3xl">
-              Practical AI, thoughtful product, real impact.
+              A little about me.
             </h1>
             <p className="mt-8 text-lg sm:text-xl text-ink-600 max-w-3xl leading-relaxed">
               {about.intro}
