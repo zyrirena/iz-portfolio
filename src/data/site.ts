@@ -21,10 +21,10 @@ export const siteConfig = {
   },
 
   hero: {
-    eyebrow: 'AI Product Builder · Researcher',
-    headline: 'Building Practical AI Solutions for Real-World Problems',
+    eyebrow: 'Student · Responsible AI Hobbyist',
+    headline: 'Exploring & Building Ethical AI for Fun',
     subheadline:
-      'I design and build AI-powered applications that improve wellness, productivity, decision-making, and user experiences.',
+      "This is my personal playground. I'm currently studying Responsible AI and using this space to share my hobby projects, academic experiments, and learning journey.",
     primaryCta: { label: 'View Projects', href: '/projects' },
     secondaryCta: { label: 'Read Blog', href: '/blog' },
   },
@@ -97,8 +97,8 @@ export const siteConfig = {
   ],
 
   contact: {
-    heading: "Let's build something useful.",
-    body: 'Interested in collaborating, discussing AI, or exploring project opportunities? Connect with me on GitHub.',
+    heading: "Let's geek out over AI.",
+    body: 'I am always happy to connect with fellow students, hobbyists, or anyone passionate about ethical tech. Feel free to explore my code on GitHub or say hello!',
   },
 };
 
