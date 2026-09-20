@@ -29,7 +29,7 @@ export default async function HomePage() {
                 <div>
                   <span className="eyebrow">Projects</span>
                   <h2 className="mt-3 text-display-lg font-display text-ink-900">
-                    Building things that matter.
+                    Notes from my studies.
                   </h2>
                 </div>
                 <Link
