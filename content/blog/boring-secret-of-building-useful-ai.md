@@ -1,5 +1,5 @@
 ---
-title: "The boring secret of building useful AI products"
+title: "What I'm learning about building useful AI"
 slug: "boring-secret-of-building-useful-ai"
 excerpt: "Most AI product failures aren't model failures. They're product failures wearing a model-failure costume."
 category: "Product Development"
