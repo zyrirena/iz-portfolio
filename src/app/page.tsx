@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Hero from '@/components/Hero';
+import WhatImInto from '@/components/WhatImInto';
 import ProjectCard from '@/components/ProjectCard';
 import BlogCard from '@/components/BlogCard';
 import GitHubCard from '@/components/GitHubCard';
@@ -19,6 +20,8 @@ export default async function HomePage() {
   return (
     <>
       <Hero />
+
+      <WhatImInto />
 
       {/* Featured project */}
       {featuredProject && (
