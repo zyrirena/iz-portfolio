@@ -96,6 +96,18 @@ export const siteConfig = {
     },
   ],
 
+  // Coaching page. Paste your scheduling link (Calendly, Cal.com, Google
+  // Calendar appointment page, ...) into bookingUrl to show the calendar.
+  coaching: {
+    eyebrow: 'Coaching',
+    heading: 'Book a coaching conversation.',
+    intro:
+      'One-to-one coaching for people who want a thinking partner — to get clear on a goal, build a habit that sticks, or work through a decision.',
+    credentialNote:
+      'I’m training toward an ICF credential and coach in line with the ICF Core Competencies and Code of Ethics.',
+    bookingUrl: '',
+  },
+
   contact: {
     heading: "Let's geek out over AI.",
     body: 'I am always happy to connect with fellow students, hobbyists, or anyone passionate about ethical tech. Feel free to explore my code on GitHub or say hello!',
