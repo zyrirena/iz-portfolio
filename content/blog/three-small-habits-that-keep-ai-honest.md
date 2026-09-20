@@ -1,5 +1,5 @@
 ---
-title: "Three small habits that keep an AI product honest"
+title: "Notes on keeping my AI experiments honest"
 slug: "three-small-habits-that-keep-ai-honest"
 excerpt: "Responsible AI doesn't have to be a sweeping framework. Sometimes it's three small habits you build into the team's daily work."
 category: "Responsible AI"
