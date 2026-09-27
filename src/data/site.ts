@@ -154,6 +154,8 @@ export const siteConfig = {
       'One-to-one coaching for people who want a thinking partner — to get clear on a goal, build a habit that sticks, or work through a decision.',
     credentialNote:
       'I’m training toward an ICF credential and coach in line with the ICF Core Competencies and Code of Ethics.',
+    bio: 'As a career and leadership coach with a deep background in federal Human Resources, I partner with mission-driven professionals and leaders navigating high-stakes career transitions. My approach is grounded in International Coaching Federation (ICF) standards, combining structured strategic inquiry with practical talent management insights. Whether you are stepping into executive leadership, pivoting between sectors, or redefining your career vision, I provide a confidential, thought-provoking space to challenge your assumptions, uncover your strengths, and build actionable roadmaps that produce measurable results.',
+    explainerVideo: '/videos/coaching/what-is-coaching.mp4',
     bookingUrl: 'https://calendar.app.google/x9UEYMw2jiH5bCb17',
     // true = show the calendar inline (iframe); false = show a booking button.
     embed: false,
