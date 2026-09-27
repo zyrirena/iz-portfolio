@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import FadeIn from '@/components/FadeIn';
 import { siteConfig } from '@/data/site';
+import { asset } from '@/lib/utils';
 
 export const metadata: Metadata = {
   title: 'Coaching',
@@ -61,6 +62,38 @@ export default function CoachingPage() {
       </section>
 
       <section className="container-content pb-16">
+        <FadeIn>
+          <div className="card p-8 sm:p-12 bg-gradient-to-br from-pink-100 via-white to-teal-100 border-ink-200">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+              <div>
+                <h2 className="text-display-md font-display text-ink-900">
+                  About your coach
+                </h2>
+                <p className="mt-4 text-ink-600 leading-relaxed">
+                  {coaching.bio}
+                </p>
+              </div>
+              <div className="w-full">
+                <div className="relative aspect-video rounded-2xl overflow-hidden border border-ink-200 bg-[#060a0e] shadow-card">
+                  <video
+                    controls
+                    preload="metadata"
+                    className="absolute inset-0 w-full h-full object-cover"
+                  >
+                    <source src={asset(coaching.explainerVideo)} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <p className="mt-3 text-sm text-ink-500 text-center">
+                  What is coaching?
+                </p>
+              </div>
+            </div>
+          </div>
+        </FadeIn>
+      </section>
+
+      <section className="container-content pb-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {principles.map((p, idx) => (
             <FadeIn key={p.title} delay={idx * 80}>
@@ -73,6 +106,42 @@ export default function CoachingPage() {
             </FadeIn>
           ))}
         </div>
+      </section>
+
+      <section className="container-content pb-16">
+        <FadeIn>
+          <div className="card p-8 sm:p-12 bg-gradient-to-br from-pink-100 via-white to-teal-100 border-ink-200">
+            <div className="grid grid-cols-1 md:grid-cols-[minmax(0,320px)_1fr] gap-8 md:gap-12 items-center">
+              <div className="mx-auto w-full max-w-[320px]">
+                <div className="relative aspect-[9/16] rounded-2xl overflow-hidden border border-ink-200 bg-[#060a0e] shadow-card">
+                  <video
+                    controls
+                    preload="metadata"
+                    className="absolute inset-0 w-full h-full object-cover"
+                  >
+                    <source src={asset('/videos/coaching/how-coaching-works.mp4')} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              </div>
+              <div>
+                <h2 className="text-display-md font-display text-ink-900">
+                  See how coaching actually works
+                </h2>
+                <p className="mt-3 text-ink-600 leading-relaxed max-w-xl">
+                  A quick look at what a professional coaching conversation is
+                  really like — before you book a session.
+                </p>
+                <div className="mt-6">
+                  <a href="#book" className="btn-primary">
+                    Book a session
+                    <span aria-hidden="true">↓</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </FadeIn>
       </section>
 
       <section id="book" className="container-content pb-24 scroll-mt-24">
