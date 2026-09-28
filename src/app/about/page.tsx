@@ -5,36 +5,37 @@ import { siteConfig } from '@/data/site';
 
 export const metadata: Metadata = {
   title: 'About',
-  description: `About ${siteConfig.name} — federal HR background, responsible-AI student, coach in training, and small-shop owner.`,
+  description: `About ${siteConfig.name} — federal HR professional, responsible-AI graduate student, coach in training, and small-shop owner.`,
 };
 
 const skillCategoryColors: Record<string, string> = {
+  'HR Systems & Tools': 'bg-teal-100 text-teal-700',
+  'Productivity & Collaboration': 'bg-ink-100 text-ink-700',
+  'Data & AI Tools': 'bg-pink-100 text-pink-700',
   Languages: 'bg-pink-100 text-pink-700',
-  'AI & ML': 'bg-teal-100 text-teal-700',
-  Frontend: 'bg-ink-100 text-ink-700',
-  Backend: 'bg-ink-100 text-ink-700',
-  Infra: 'bg-ink-100 text-ink-700',
+  'Training & Process': 'bg-teal-100 text-teal-700',
 };
 
 const timeline = [
   {
-    date: '2024 — Present',
-    title: 'AI Product Builder & Researcher',
+    date: '2023 — Present',
+    title: 'Senior Human Resources Specialist',
     description:
-      'Building Wellness Coach AI and exploring practical applications of LLMs in behavioral health and decision-support tooling.',
+      'Advise leadership within a federal agency on workforce strategy, recruitment, and personnel policy for a large, multinational organization; mentor junior HR staff.',
     tag: 'Current',
   },
   {
-    date: '2022 — 2024',
-    title: 'Product Engineering',
+    date: '2025 — Present',
+    title: 'Adjunct Faculty, HR Training',
     description:
-      'Shipped consumer and B2B applications with a focus on personalization, recommendation systems, and clean user experiences.',
+      'Deliver virtual HR training and instruction to a geographically distributed public-sector workforce.',
+    tag: 'Current',
   },
   {
-    date: '2020 — 2022',
-    title: 'Foundations',
+    date: '2019 — 2023',
+    title: 'Human Resources Specialist',
     description:
-      'Software engineering across full-stack web, data pipelines, and early generative-AI experiments.',
+      'Advised leadership on classification, staffing, and employee relations within a federal HR office, including an international liaison assignment.',
   },
 ];
 
@@ -42,10 +43,10 @@ export default function AboutPage() {
   const { about } = siteConfig;
 
   const sections: Array<{ title: string; items: string[]; tone: 'pink' | 'teal' }> = [
-    { title: 'AI Interests', items: about.aiInterests, tone: 'teal' },
-    { title: 'Responsible AI Focus', items: about.responsibleAi, tone: 'pink' },
-    { title: 'Product Development', items: about.productDevelopment, tone: 'teal' },
-    { title: 'Research Interests', items: about.research, tone: 'pink' },
+    { title: 'Federal HR Leadership', items: about.hrLeadership, tone: 'teal' },
+    { title: 'Training & Instruction', items: about.trainingInstruction, tone: 'pink' },
+    { title: 'International & Cross-Cultural', items: about.international, tone: 'teal' },
+    { title: 'Studying Responsible AI', items: about.studyingAi, tone: 'pink' },
   ];
 
   return (
@@ -102,7 +103,7 @@ export default function AboutPage() {
                           className={`mt-1.5 w-1.5 h-1.5 rounded-full shrink-0 ${
                             tone === 'pink' ? 'bg-pink-400' : 'bg-teal-400'
                           }`}
-                          aria-hidden="true"
+                        aria-hidden="true"
                         />
                         {item}
                       </li>
@@ -121,7 +122,7 @@ export default function AboutPage() {
           <FadeIn>
             <span className="eyebrow">Toolkit</span>
             <h2 className="mt-3 text-display-md font-display text-ink-900">
-              Technical skills.
+              Professional toolkit.
             </h2>
           </FadeIn>
 
@@ -163,6 +164,54 @@ export default function AboutPage() {
           <FadeIn delay={100}>
             <Timeline items={timeline} />
           </FadeIn>
+        </div>
+      </section>
+
+      {/* Education & Certifications */}
+      <section className="section pt-0">
+        <div className="container-content">
+          <FadeIn>
+            <span className="eyebrow">Credentials</span>
+            <h2 className="mt-3 text-display-md font-display text-ink-900 mb-10">
+              Education & certifications.
+            </h2>
+          </FadeIn>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <FadeIn delay={80}>
+              <div className="card p-6 sm:p-8 h-full">
+                <h3 className="text-sm font-semibold tracking-[0.18em] uppercase text-ink-500">
+                  Education
+                </h3>
+                <ul className="mt-5 space-y-5">
+                  {about.education.map((e) => (
+                    <li key={e.degree}>
+                      <p className="font-semibold text-ink-900 leading-snug">{e.degree}</p>
+                      <p className="mt-1 text-sm text-ink-600">{e.detail}</p>
+                      <p className="mt-1 text-sm text-ink-500">{e.date}</p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </FadeIn>
+            <FadeIn delay={160}>
+              <div className="card p-6 sm:p-8 h-full">
+                <h3 className="text-sm font-semibold tracking-[0.18em] uppercase text-ink-500">
+                  Certifications
+                </h3>
+                <ul className="mt-5 space-y-5">
+                  {about.certifications.map((c) => (
+                    <li key={c.name}>
+                      <p className="font-semibold text-ink-900 leading-snug">{c.name}</p>
+                      <p className="mt-1 text-sm text-ink-600">
+                        {c.org ? `${c.org} · ` : ''}
+                        {c.date}
+                      </p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </FadeIn>
+          </div>
         </div>
       </section>
     </>
