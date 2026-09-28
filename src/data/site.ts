@@ -32,39 +32,84 @@ export const siteConfig = {
 
   about: {
     intro:
-      'I’m Irena. I have a background in federal HR, where people, policy, and fairness are the daily work — and it shapes how I think about building AI responsibly. These days I’m studying Responsible AI, building hobby projects with AI agents, training toward my ICF coaching credential, and running CraftyGalShop, my online shop for personalized off-roading gifts.',
-    aiInterests: [
-      'Large language model applications',
-      'Behavioral and wellness AI',
-      'Multimodal interfaces',
-      'Retrieval-augmented systems',
-      'Personalization and recommender systems',
+      'I’m Irena. I have over eight years of experience in federal human resources, advising leadership on workforce strategy, recruitment, and personnel policy for a large public-sector organization. My work has also included international liaison work and adult instruction. I’m finishing a Master of Science in Management with a Graduate Certificate in Responsible AI at George Mason University, training toward my ICF coaching credential, and running CraftyGalShop, my online shop for personalized off-roading gifts.',
+    hrLeadership: [
+      'Advise leadership on workforce strategy, recruitment, and personnel policy',
+      'Manage full-cycle recruitment for a range of vacancies, domestic and international',
+      'Interpret federal regulations into clear, practical guidance for hiring managers',
+      'Provide oversight and quality control for junior HR staff',
     ],
-    responsibleAi: [
-      'Privacy-preserving design',
-      'Transparent model behavior',
-      'Bias auditing and evaluation',
-      'Human-in-the-loop systems',
-      'Safety-aware product decisions',
+    trainingInstruction: [
+      'Serve as adjunct faculty, delivering HR training to a distributed public-sector workforce',
+      'Lead virtual instruction for learners across multiple locations',
+      'Translate complex regulatory and policy content into adult-learner-friendly materials',
+      'Lean Six Sigma Yellow Belt',
     ],
-    productDevelopment: [
-      'End-to-end product ownership: discovery → ship → learn',
-      'Rapid prototyping with modern AI stacks',
-      'User research and behavioral design',
-      'Cross-functional collaboration',
+    international: [
+      'Served as a liaison between U.S. organizations and international partners',
+      'Managed multinational stakeholder relationships across language and culture',
+      'Advised leadership on cross-cultural and governance considerations',
+      'Bilingual: English and Polish',
     ],
-    research: [
-      'Applied LLM evaluation',
-      'Behavior change through AI coaching',
-      'Human-AI interaction patterns',
-      'Decision-support tooling',
+    studyingAi: [
+      'Master of Science in Management, George Mason University',
+      'Graduate Certificate in Responsible Artificial Intelligence, George Mason University',
+      'Bringing a policy and fairness lens from HR into how AI systems get built and governed',
+      'Hands-on practice with data and AI tools — R Studio, Jupyter Notebook, Visual Studio',
+      'Building hobby AI projects — like LeanMind AI — as a practical complement to coursework',
+    ],
+    education: [
+      {
+        degree: 'Master of Science in Management',
+        detail: 'Costello College of Business, George Mason University — Fairfax, VA',
+        date: 'Expected December 2026 · 3.76 GPA',
+      },
+      {
+        degree: 'Graduate Certificate in Responsible Artificial Intelligence',
+        detail: 'George Mason University — Fairfax, VA',
+        date: 'August 2026',
+      },
+      {
+        degree: 'Bachelor of Individualized Study, Entrepreneurship and Information Systems',
+        detail: 'George Mason University — Fairfax, VA',
+        date: 'December 2025 · Graduated with Recognition, 3.88 GPA',
+      },
+      {
+        degree: 'Applied Science Associate, Information Technology',
+        detail: 'Central Texas College — Killeen, TX',
+        date: 'December 2014 · Graduated with Honors, 3.91 GPA',
+      },
+    ],
+    certifications: [
+      { name: 'ICF Level 1 Coach Training Credential', org: 'SCT Coaching Academy', date: '2026' },
+      { name: 'Civilian Education System (CES), Intermediate Level', org: '', date: '2025' },
+      { name: 'DoD Human Resources Staffing Advisor Level 1', org: '', date: '2024' },
+      { name: 'Equal Opportunity Leader (EOL) Certification', org: '', date: '2020' },
+      { name: 'Lean Six Sigma Yellow Belt', org: '', date: '2019' },
     ],
     skills: {
-      Languages: ['TypeScript', 'Python', 'SQL'],
-      'AI & ML': ['LLMs', 'LangChain', 'OpenAI API', 'Anthropic API', 'Embeddings', 'RAG'],
-      Frontend: ['React', 'Next.js', 'Tailwind CSS'],
-      Backend: ['Node.js', 'FastAPI', 'PostgreSQL', 'Redis'],
-      Infra: ['Vercel', 'AWS', 'Docker', 'GitHub Actions'],
+      'HR Systems & Tools': ['Applicant tracking systems', 'Personnel records systems', 'Case management tools'],
+      'Productivity & Collaboration': [
+        'Microsoft Word',
+        'Microsoft Excel',
+        'Microsoft PowerPoint',
+        'Microsoft Access',
+        'Microsoft Publisher',
+        'Microsoft Outlook',
+        'Microsoft Project',
+        'SharePoint',
+        'Microsoft Teams',
+      ],
+      'Data & AI Tools': [
+        'R Studio',
+        'Jupyter Notebook',
+        'Visual Studio',
+        'TypeScript',
+        'GitHub',
+        'Vercel',
+      ],
+      Languages: ['English (Fluent)', 'Polish (Native)'],
+      'Training & Process': ['Lean Six Sigma Yellow Belt', 'Instructional Design', 'Adult Learning'],
     },
   },
 
