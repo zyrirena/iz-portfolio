@@ -7,21 +7,21 @@ import { asset } from '@/lib/utils';
 export const metadata: Metadata = {
   title: 'Coaching',
   description:
-    'Book a coaching conversation — ICF-aligned, client-led, and confidential.',
+    'Career and leadership coaching for federal HR professionals and military spouses navigating transitions — ICF-aligned and confidential.',
 };
 
-const principles = [
+const focusAreas = [
   {
-    title: 'Your agenda, your pace',
-    body: 'Sessions start from what you want to talk about. I ask questions, reflect back what I hear, and help you find your own next step.',
+    title: 'Federal HR to what’s next',
+    body: 'Whether you’re eyeing a supervisory role, prepping for a promotion, or considering a move to the private sector, we work from real knowledge of how federal hiring and advancement actually work.',
   },
   {
-    title: 'Coaching, not advice',
-    body: 'Coaching is a partnership. I won’t tell you what to do — I’ll help you think it through and hold you to what you decide.',
+    title: 'Career continuity through every PCS',
+    body: 'Frequent moves shouldn’t mean starting over. We build a career strategy that travels with you — through relocations, employment gaps, and licensing hurdles.',
   },
   {
-    title: 'Confidential by default',
-    body: 'What you share stays between us, in line with the ICF Code of Ethics. Coaching is not therapy, medical care, or professional advice.',
+    title: 'Confidential, ICF-aligned',
+    body: 'What you share stays between us, in line with the ICF Code of Ethics — that matters when your career, and sometimes your clearance, are both on the line.',
   },
 ];
 
@@ -72,6 +72,20 @@ export default function CoachingPage() {
                 <p className="mt-4 text-ink-600 leading-relaxed">
                   {coaching.bio}
                 </p>
+                <ul className="mt-5 space-y-2.5">
+                  {coaching.whyBackground.map((item) => (
+                    <li
+                      key={item}
+                      className="flex items-start gap-2.5 text-sm text-ink-700"
+                    >
+                      <span
+                        className="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0 bg-teal-400"
+                        aria-hidden="true"
+                      />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
               <div className="w-full">
                 <div className="relative aspect-video rounded-2xl overflow-hidden border border-ink-200 bg-[#060a0e] shadow-card">
@@ -95,7 +109,7 @@ export default function CoachingPage() {
 
       <section className="container-content pb-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {principles.map((p, idx) => (
+          {focusAreas.map((p, idx) => (
             <FadeIn key={p.title} delay={idx * 80}>
               <div className="card p-8 h-full">
                 <h2 className="text-xl font-display font-semibold tracking-tight text-ink-900">
@@ -106,6 +120,38 @@ export default function CoachingPage() {
             </FadeIn>
           ))}
         </div>
+      </section>
+
+      <section className="container-content pb-16">
+        <FadeIn>
+          <span className="eyebrow">Client feedback</span>
+          <h2 className="mt-3 text-display-md font-display text-ink-900 mb-8">
+            What clients say.
+          </h2>
+        </FadeIn>
+        {coaching.testimonials.length > 0 ? (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {coaching.testimonials.map((t, idx) => (
+              <FadeIn key={t.name} delay={idx * 80}>
+                <div className="card p-8 h-full">
+                  <p className="text-ink-600 leading-relaxed">“{t.quote}”</p>
+                  <p className="mt-4 text-sm font-medium text-ink-900">{t.name}</p>
+                  {t.role && <p className="text-sm text-ink-500">{t.role}</p>}
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        ) : (
+          <FadeIn delay={80}>
+            <div className="card p-8 sm:p-10 text-center bg-gradient-to-br from-pink-100 via-white to-teal-100 border-ink-200">
+              <p className="text-ink-600 max-w-xl mx-auto">
+                I’m currently building my practice hours through peer and
+                pro-bono sessions — client testimonials will start appearing
+                here soon.
+              </p>
+            </div>
+          </FadeIn>
+        )}
       </section>
 
       <section className="container-content pb-16">
@@ -210,6 +256,29 @@ export default function CoachingPage() {
               <p className="mt-5 text-sm text-ink-500">
                 {coaching.bookingNote}
               </p>
+
+              <div className="mt-8 card p-6 sm:p-8 border-ink-200 bg-white/60">
+                <h3 className="text-lg font-display font-semibold tracking-tight text-ink-900">
+                  {coaching.waitlist.heading}
+                </h3>
+                <p className="mt-2 text-sm text-ink-600 leading-relaxed max-w-xl">
+                  {coaching.waitlist.body}
+                </p>
+                {coaching.waitlist.url ? (
+                  <a
+                    href={coaching.waitlist.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-secondary mt-4 inline-flex"
+                  >
+                    Join the waitlist <span aria-hidden="true">↗</span>
+                  </a>
+                ) : (
+                  <p className="mt-4 text-xs text-ink-400">
+                    Waitlist signup opening soon.
+                  </p>
+                )}
+              </div>
             </div>
           ) : (
             <div className="mt-8 card p-10 sm:p-14 text-center bg-gradient-to-br from-pink-100 via-white to-teal-100 border-ink-200">
