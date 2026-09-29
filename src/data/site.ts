@@ -193,13 +193,19 @@ export const siteConfig = {
   // Coaching page. Paste your scheduling link (Calendly, Cal.com, Google
   // Calendar appointment page, ...) into bookingUrl to show the calendar.
   coaching: {
-    eyebrow: 'Coaching',
-    heading: 'Book a coaching conversation.',
+    eyebrow: 'Coaching · Federal HR & Military Spouse Transitions',
+    heading: 'Career coaching for federal HR professionals and military spouses in transition.',
     intro:
-      'One-to-one coaching for people who want a thinking partner — to get clear on a goal, build a habit that sticks, or work through a decision.',
+      'One-to-one coaching for people navigating a career transition — a federal promotion or pivot, or a fresh start after a PCS move. A thinking partner to get clear on what’s next and build a plan that actually sticks.',
     credentialNote:
       'I’m training toward an ICF credential and coach in line with the ICF Core Competencies and Code of Ethics.',
-    bio: 'As a career and leadership coach with a deep background in federal Human Resources, I partner with mission-driven professionals and leaders navigating high-stakes career transitions. My approach is grounded in International Coaching Federation (ICF) standards, combining structured strategic inquiry with practical talent management insights. Whether you are stepping into executive leadership, pivoting between sectors, or redefining your career vision, I provide a confidential, thought-provoking space to challenge your assumptions, uncover your strengths, and build actionable roadmaps that produce measurable results.',
+    bio: 'As a career and leadership coach with a deep background in federal Human Resources, I work with two communities I know well: federal HR and workforce professionals navigating a promotion, a pivot, or a move to the private sector, and military spouses rebuilding a career through frequent relocations. My approach is grounded in International Coaching Federation (ICF) standards, combining structured strategic inquiry with practical talent management insights. Whether you are stepping into leadership, changing sectors, or starting over after a move, I provide a confidential, thought-provoking space to challenge your assumptions, uncover your strengths, and build actionable roadmaps that produce measurable results.',
+    whyBackground: [
+      'Eight-plus years inside federal human resources — advising leadership on workforce strategy, recruitment, and personnel policy',
+      'On the inside of the same hiring and promotion processes you’re navigating from the outside',
+      'International liaison experience across relocations, time zones, and multinational teams — the same disruption a PCS brings',
+      'Bilingual and cross-culturally fluent, with a practiced eye for the identity shift a big transition brings',
+    ],
     explainerVideo: '/videos/coaching/what-is-coaching.mp4',
     bookingUrl: 'https://calendar.app.google/x9UEYMw2jiH5bCb17',
     // true = show the calendar inline (iframe); false = show a booking button.
@@ -217,6 +223,17 @@ export const siteConfig = {
     ],
     bookingNote:
       'Sessions are held on Google Meet, and the link is sent after you book. I’m based in Eastern Time and can be flexible for international schedules. Please bring a specific topic you’d like to work on.',
+    // Add real client quotes here as you collect them: { quote, name, role }.
+    // Leave empty and the page shows an honest "building my hours" note instead.
+    testimonials: [] as { quote: string; name: string; role?: string }[],
+    // Capture interest for paid coaching before it launches. Paste a Google
+    // Form / Mailchimp signup link into url (same pattern as bookingUrl above)
+    // and the button appears automatically; leave blank to show "opening soon."
+    waitlist: {
+      heading: 'Paid coaching is coming.',
+      body: 'I’m building my practice hours now through peer and pro-bono sessions. Join the list for first access and founding-client pricing once paid coaching opens.',
+      url: '',
+    },
   },
 
   contact: {
