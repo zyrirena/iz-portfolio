@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import FadeIn from '@/components/FadeIn';
+import CoachingQuiz from '@/components/CoachingQuiz';
 import { siteConfig } from '@/data/site';
 import { asset } from '@/lib/utils';
 
@@ -120,6 +121,15 @@ export default function CoachingPage() {
             </FadeIn>
           ))}
         </div>
+      </section>
+
+      <section className="container-content pb-16">
+        <FadeIn>
+          <CoachingQuiz
+            bookingUrl={bookingUrl || undefined}
+            waitlistUrl={coaching.waitlist.url || undefined}
+          />
+        </FadeIn>
       </section>
 
       <section className="container-content pb-16">
