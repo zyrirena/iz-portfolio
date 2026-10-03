@@ -118,7 +118,82 @@ body {
                 radial-gradient(50% 50% at 70% 70%, #4ECDC4 0%, transparent 65%);
     filter: blur(60px);
     opacity: 0.55;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform;
   }
+
+  /* Animated underline for desktop nav links */
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    bottom: 6px;
+    height: 2px;
+    border-radius: 9999px;
+    background: theme('colors.teal.400');
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .nav-link:hover::after {
+    transform: scaleX(1);
+  }
+}
+
+/* ============================================================
+   Custom cursor (desktop, fine-pointer only — see CustomCursor.tsx)
+   ============================================================ */
+
+.cursor-dot,
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  border-radius: 9999px;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.2s ease;
+}
+.cursor-dot {
+  width: 6px;
+  height: 6px;
+  background: #2FB4AB;
+  display: none;
+}
+.cursor-ring {
+  width: 32px;
+  height: 32px;
+  border: 1.5px solid #4ECDC4;
+  display: none;
+  transition: width 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              height 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.2s ease;
+}
+.cursor-ring--hover {
+  width: 52px;
+  height: 52px;
+  border-color: #F4B7CE;
+}
+
+body.cursor-active {
+  cursor: none;
+}
+body.cursor-active a,
+body.cursor-active button,
+body.cursor-active [role='button'] {
+  cursor: none;
+}
+body.cursor-active input,
+body.cursor-active textarea,
+body.cursor-active select {
+  cursor: auto;
+}
+body.cursor-active .cursor-dot,
+body.cursor-active .cursor-ring {
+  display: block;
 }
 
 /* ============================================================
