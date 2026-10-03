@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import CustomCursor from '@/components/CustomCursor';
 import SiteInteractions from '@/components/SiteInteractions';
 import CommandPalette from '@/components/CommandPalette';
+import WelcomeGuide from '@/components/WelcomeGuide';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -83,6 +84,7 @@ export default function RootLayout({
         <CustomCursor />
         <SiteInteractions />
         <CommandPalette />
+        <WelcomeGuide />
       </body>
     </html>
   );
