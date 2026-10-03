@@ -3,6 +3,9 @@ import './globals.css';
 import { siteConfig } from '@/data/site';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import CustomCursor from '@/components/CustomCursor';
+import SiteInteractions from '@/components/SiteInteractions';
+import CommandPalette from '@/components/CommandPalette';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -77,6 +80,9 @@ export default function RootLayout({
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
+        <CustomCursor />
+        <SiteInteractions />
+        <CommandPalette />
       </body>
     </html>
   );
